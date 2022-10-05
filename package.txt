@@ -17,9 +17,10 @@ PORT=8080
 MONGODB_CNN= Se encientra en la base de datos de mongo
 SECRETORPRIVATEKEY= Cualquier cosa ejemplo Est03sMyPub1ck3y23@9123
 
-
 Lo de google lo encuentra en https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
 GOOGLE_CLIENT_ID=
 GOOGLE_SECRET_ID=
+
+
 
 
