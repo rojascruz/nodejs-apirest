@@ -11,7 +11,8 @@ const router = Router();
 
 
 
-router.get('/', Usuario.usersGet);
+// router.get('/', Usuario.usersGet);
+router.get('/', Usuario.usersGetE);
 
 router.get('/:id', Usuario.userGet);
 

@@ -27,6 +27,21 @@ const usersGet = async(req, res = response) => {
 
 }
 
+const usersGetE = async(req, res = response) => {
+    
+
+    const {id} = req.query;
+    const usuario = await Usuario.findById(id);
+
+    if(!usuario.estado){
+        return res.status(400).json({
+            msg: 'No existe el usuario'
+        })
+    }
+    res.json(usuario)
+
+}
+
 // Mostrar solo un usuario
 const userGet = async(req, res = response) => {
 
@@ -109,6 +124,7 @@ const usersDelete = async(req, res = response) => {
 module.exports = {
     userGet,
     usersGet,
+    usersGetE,
     usersPost,
     usersPut,
     usersDelete,

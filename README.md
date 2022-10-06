@@ -12,6 +12,7 @@ npm i dotenv
 npm i cors
 
 
+heroku config:set MONGODB_CNN=""
 
 Me quede en el video 189 min 5:39 pero empiezo en el min 5
 
