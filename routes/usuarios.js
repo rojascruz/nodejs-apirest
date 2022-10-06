@@ -12,7 +12,11 @@ const router = Router();
 
 
 // router.get('/', Usuario.usersGet);
-router.get('/', Usuario.usersGetE);
+router.get('/', [
+    check('id', 'No es un ID valido').isMongoId(),
+    check('id').custom(existeUsuarioPorId),
+    validarCampos
+], Usuario.usersGetE);
 
 router.get('/:id', Usuario.userGet);
 

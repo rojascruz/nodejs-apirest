@@ -33,6 +33,12 @@ const usersGetE = async(req, res = response) => {
     const {id} = req.query;
     const usuario = await Usuario.findById(id);
 
+    if(!usuario.id){
+        return res.status(401).json({
+            msg: `No existe ete ID ${id} en la base de datos`
+        })
+    }
+    
 
     res.json(usuario)
 
