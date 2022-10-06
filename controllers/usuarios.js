@@ -123,7 +123,6 @@ const usersDelete = async(req, res = response) => {
 
 module.exports = {
     userGet,
-    usersGet,
     usersGetE,
     usersPost,
     usersPut,
